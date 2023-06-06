@@ -1,0 +1,33 @@
+.itemCardContainer {
+    background-color: white;
+    display: flex;
+    height: 240px;
+    border: 1px solid black;
+    margin: 12px;
+  }
+  
+  .itemDetails {
+    width: 85%;
+    text-align: left;
+    margin: 12px;
+    font-size: .8rem;
+  }
+
+  .itemDescription,
+  .itemPrice{
+    font-weight: 300;
+  }
+  
+  .itemPhotoContainer {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .itemPhoto {
+    width: 200px;
+    height: auto;
+    max-height: 200px;
+  }
+  
