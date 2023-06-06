@@ -1,0 +1,14 @@
+.counterContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 500px;
+  height: 250px;
+}
+
+h1{
+  font-size: 48px;
+  font-weight: 700;
+}

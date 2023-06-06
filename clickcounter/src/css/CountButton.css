@@ -1,0 +1,29 @@
+.countButtonContainer{
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.countButton{
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    font-size: x-large;
+    font-weight: 600;
+}
+
+p{
+    font-size: xx-large;
+    font-weight: 600;
+    margin: 20px;
+}
+
+#plus{
+    background-color: green;
+}
+
+#minus{
+    background-color: red;
+}
