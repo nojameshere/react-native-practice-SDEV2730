@@ -1,0 +1,7 @@
+.deleteItemCardContainer{
+    display: flex;   
+}
+
+.deleteButton{
+    font-size: 16px;
+}

@@ -5,6 +5,12 @@
     border: 1px solid black;
     margin: 12px;
   }
+
+  .itemCardSubContainer{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
   
   .itemDetails {
     width: 85%;
@@ -19,7 +25,7 @@
   }
   
   .itemPhotoContainer {
-    width: 15%;
+    min-width: 240px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,5 +35,6 @@
     width: 200px;
     height: auto;
     max-height: 200px;
+    padding-right: 25px;
   }
   

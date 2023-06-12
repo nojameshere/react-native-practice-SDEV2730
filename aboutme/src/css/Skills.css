@@ -1,0 +1,9 @@
+.skillsContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.skillsList{
+    list-style-type: disc;
+    text-align: left;
+}
