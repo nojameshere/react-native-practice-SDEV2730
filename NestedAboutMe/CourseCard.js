@@ -1,0 +1,50 @@
+import React, { useState, useEffect } from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+import * as Font from 'expo-font';
+
+export default function CourseCard({item}) {
+
+    const [fontLoaded, setFontLoaded] = useState(false);
+
+    const loadFont = async () => {
+        await Font.loadAsync({
+          'Dosis': require('./fonts/Dosis-VariableFont_wght.ttf'),
+        });
+        setFontLoaded(true);
+      };
+      
+      useEffect(() => {
+        loadFont();
+      }, []);
+      
+
+    return (
+    <View key={item.id} style={styles.courseCard}>
+        <Text style={styles.course}>{item.course}</Text>
+        <Text style={styles.description}>{item.description}</Text>
+    </View>
+    )
+}
+
+
+const styles = StyleSheet.create({
+    courseCard: {
+        padding: 5,
+        backgroundColor: '#efefef',
+        margin: 10,
+        borderRadius: 10,
+      },
+      course: {
+        fontFamily: 'Dosis',
+        fontSize: 20,
+        fontWeight: 700,
+        paddingRight: 20,
+        paddingTop: 5,
+        paddingBottom: 5,
+    },
+    description: {
+        fontFamily: 'Dosis',
+        fontSize: 16,
+        marginRight: 20,
+    },
+})
