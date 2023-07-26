@@ -36,6 +36,16 @@ export default function Navbar({content, setContent}) {
             </View>
             )
         }
+        else if (content === 'validation'){
+            return(
+                <View style={styles.navContent}>
+                <TouchableOpacity onPress={() => setContent('main')}>
+                <AntDesign name="arrowleft" size={24} color="purple" marginRight={50}/>
+                </TouchableOpacity>
+                <Text style={styles.navText}>Validation</Text>
+            </View>
+            )
+        }
         else {
             return(
             <View>

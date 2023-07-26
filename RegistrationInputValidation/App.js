@@ -5,19 +5,12 @@ import Blue from './pages/Blue';
 import Green from './pages/Green';
 import Red from './pages/Red';
 import Navbar from './Navbar';
-import { UserContext } from './context/userContext';
+import UserContextProvider from './context/userContext';
+import Validation from './pages/Validation';
 
 export default function App() {
 
-  const initialState = {
-    firstName: 'James',
-    lastName: 'Sales',
-    phone: '801-555-5510',
-    email: 'jamessales@salesjames.co.uk'
-  }
-
-
-  const [content, setContent] = useState('main');
+  const [content, setContent] = useState('');
 
   const handleContentChange = (newContent) => {
     setContent(newContent);
@@ -25,18 +18,20 @@ export default function App() {
 
   const renderContent = () => {
     if (content === 'name') {
-      return <Blue />;
+      return <Blue setContent={setContent} />;
     } else if (content === 'email') {
-      return <Red />;
+      return <Red setContent={setContent}/>;
     } else if (content === 'phone') {
-      return <Green />;
+      return <Green setContent={setContent}/>;
+    } else if (content === 'validation') {
+      return <Validation setContent={setContent}/>;
     } else {
       return <Main setContent={handleContentChange} />;
     }
   };
 
   return (
-    <UserContext.Provider value={initialState}>
+    <UserContextProvider>
       <View style={styles.container}>
         <View style={styles.navbar}>
           <Navbar content={content} setContent={setContent} />
@@ -45,7 +40,7 @@ export default function App() {
           {renderContent()}
         </View>
       </View>
-    </UserContext.Provider>
+    </UserContextProvider>
   );
 }
 
